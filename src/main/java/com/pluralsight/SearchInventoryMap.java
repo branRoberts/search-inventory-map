@@ -37,6 +37,8 @@ public class SearchInventoryMap {
                 int id = Integer.parseInt(values[0]);
                 String name = values[1];
                 double price = Double.parseDouble(values[2]);
+                Product product = new Product(id, name, price);
+                inventory.put(id, product);
             }
             reader.close();
         }catch (Exception e){
